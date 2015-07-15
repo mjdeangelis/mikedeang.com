@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/**CSS BY MIKE DEANGELIS**/
+
+body {
+	background-image:url('../img/congruent_outline.png');
+}
+h1, h2, h3 {
+	font-family: 'Gloria Hallelujah', cursive;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+
+}
+.small {
+
+}
+.medium {
+
+}
+.large {
+
+}
+ul, ol {
+
+}
+#wrapper { 
+	/*background-color: #F5F5F5;*/
+	margin: 0 auto; 
+	padding: 0em;
+	width: 85%; 
+}
+#header {
+	/*background-image:url('../img/congruent_outline.png');*/
+	color: white;
+	float:left;
+	padding:.05em;
+	width: 100%;
+}
+#main-nav {
+	color: white;
+	padding:.05em;
+	width: 100%;
+}
+#logo {
+	position: relative;
+	float:left;
+}	
+
+/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	margin:0;
+	width:50%;
+	padding-top:1.5em;
+	position: relative;
+	float: right;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+		width:20%;
+}
+
+/*Style for menu links*/
+li a {
+	display:block;
+	min-width:8em;
+	width:20%;
+	height: 4em;
+	text-align: center;
+	line-height: 4em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	/*background: #333333;*/
+	/*background-image:url('../img/congruent_outline.png');*/
+	text-decoration: none;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+	color:#50b16b;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+	background: white;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	padding: 15px 0;
+	margin-top:2em;
+	display: none;
+	width:10%;
+}
+#nav-btn {
+	background: url("../img/nav-icon.svg") no-repeat scroll left center / 1.875em 1.5em;
+	display:none;
+	height:2em;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #wrapper #header #main-nav #menu {
+    display: block;
+}
+
+#main-content {
+	background: #F5F5F5;
+	min-height:700px;
+	float:left;
+	margin: 0 auto; 
+	padding: 0em;
+	width: 100%; 
+}
+.no-text {
+	visibility:hidden;
+}
+
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 760px){
+	/*wrapper should fit 100%*/
+	#wrapper {
+		width:80%;
+	}
+	/*Make dropdown links appear inline*/
+	ul {
+		position: absolute;
+		display: none;
+		padding-top:20%;
+		margin-left:20%;
+	}
+	/*Create vertical spacing*/
+	li {
+		background: white;
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {	
+		color: black;
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+		padding-left:2em;
+		float: right;
+	}
+	#nav-btn {
+		display:block;
+	}
+}

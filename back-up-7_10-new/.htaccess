@@ -1,0 +1,7 @@
+Order deny,allow
+ErrorDocument 404 /404.php
+Options +SymLinksIfOwnerMatch 
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
